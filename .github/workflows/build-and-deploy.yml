@@ -30,9 +30,9 @@ jobs:
       - name: Build and Push Docker Image
         working-directory: ./patient-service
         env:
-          DOCKER_USER: shansaifi
+          DOCKER_USER: simon123
           DOCKER_PASS: Shan2003+NR
         run: |
           echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-          docker build --no-cache -t shansaifi/patient-microservice:latest .
-          docker push shansaifi/patient-microservice:latest
+          docker build --no-cache -t simon/patient-microservice:latest .
+          docker push simon/patient-microservice:latest
